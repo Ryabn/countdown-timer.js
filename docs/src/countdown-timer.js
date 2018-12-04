@@ -24,7 +24,6 @@ class cdtimer{
                 <div class="ctd-block" id="ctd-minute">${this.minute}</div>
                 <div class="ctd-block" id="ctd-second">${this.second}</div>
             `);
-            console.log('done');
     }
     update(){
         this.current = new Date();
@@ -45,11 +44,11 @@ class cdtimer{
         this.second = this.diff % 60;
     }
     display(){
-        document.getElementById('ctd-year').innerHTML = `${this.year}`;
-        document.getElementById('ctd-month').innerHTML = `${this.month}`;
-        document.getElementById('ctd-day').innerHTML = `${this.day}`;
-        document.getElementById('ctd-hour').innerHTML = `${this.hour}`;
-        document.getElementById('ctd-minute').innerHTML = `${this.minute}`;
-        document.getElementById('ctd-second').innerHTML = `${this.second}`;
+        document.getElementById('ctd-year').innerHTML = `${this.year} <span>year</span>`;
+        document.getElementById('ctd-month').innerHTML = `${this.month} <span>months</span>`;
+        document.getElementById('ctd-day').innerHTML = `${this.day} <span>days</span>`;
+        document.getElementById('ctd-hour').innerHTML = `${this.hour} <span>hours</span>`;
+        document.getElementById('ctd-minute').innerHTML = `${this.minute} <span>minutes</span>`;
+        document.getElementById('ctd-second').innerHTML = `${this.second} <span>seconds</span>`;
     }
 }

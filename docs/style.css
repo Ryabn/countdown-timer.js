@@ -3,37 +3,24 @@ html, body{
 }
 #timer-main{
     position: fixed;
-    height: 70vh;
+    height: 80vh;
     width: 80vw;
-    top: 15vh;
+    top: 10vh;
     left: 10vw;
     box-sizing: border-box;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 1fr;
-    column-gap: 5px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    row-gap: 5px;
 }
-.ctd-block{
-    font-family: 'Oswald', sans-serif;
-    font-size: 80px;
-    color: white;
-    text-align: center;
-}
-#ctd-year{
-    background-color: rgb(167, 255, 204);
-}
-#ctd-month{
-    background-color: rgb(160, 255, 255);
-}
-#ctd-day{    
-    background-color: rgb(184, 203, 255);
-}
-#ctd-hour{
-    background-color: rgb(204, 164, 255);
-}
-#ctd-minute{
-    background-color: rgb(228, 160, 255);
-}
-#ctd-second{
-    background-color: rgb(255, 192, 140);
+@media only screen and (min-width: 600px){
+    #timer-main{
+        height: 70vh;
+        width: 80vw;
+        top: 15vh;
+        left: 10vw;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 1fr;
+        column-gap: 5px;
+    }
 }

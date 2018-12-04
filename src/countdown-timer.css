@@ -1,0 +1,33 @@
+.ctd-block{
+    font-family: 'Oswald', sans-serif;
+    font-size: 60px;
+    color: white;
+    white-space: nowrap;
+    text-align: center;
+}
+.ctd-block span{
+    font-size: 24px;
+}
+#ctd-year{
+    background-color: rgb(167, 255, 204);
+}
+#ctd-month{
+    background-color: rgb(160, 255, 255);
+}
+#ctd-day{    
+    background-color: rgb(184, 203, 255);
+}
+#ctd-hour{
+    background-color: rgb(204, 164, 255);
+}
+#ctd-minute{
+    background-color: rgb(228, 160, 255);
+}
+#ctd-second{
+    background-color: rgb(255, 192, 140);
+}
+@media only screen and (min-width: 600px){
+    .ctd-block span{
+        display:  block;
+    }
+}
