@@ -36,9 +36,9 @@ class cdtimer{
         this.diff = (this.diff/1000) >> 0;
     }
     check(){
-        this.year = this.diff/31557600 >> 0;
-        this.month = (this.diff % 31557600) / 2592000 >> 0;
-        this.day = (this.diff % 2592000) / 86400 >> 0;
+        this.year = this.diff/31536000 >> 0;
+        this.month = (this.diff % 31536000) / 2629746 >> 0;
+        this.day = (this.diff % 2629746) / 86400 >> 0;
         this.hour = (this.diff % 86400) / 3600 >> 0;
         this.minute = (this.diff % 3600) / 60 >> 0;
         this.second = this.diff % 60;
