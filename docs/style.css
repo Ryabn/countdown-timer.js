@@ -1,0 +1,12 @@
+html, body{
+    background-color: #151515;
+}
+#timer-main{
+    position: fixed;
+    height: 70vh;
+    width: 80vw;
+    top: 15vh;
+    left: 10vw;
+    box-sizing: border-box;
+    border: 1px solid white;
+}
