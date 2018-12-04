@@ -17,12 +17,12 @@ class cdtimer{
         this.calculate();
         this.check();
         document.getElementById(this.div).insertAdjacentHTML('beforeend', `
-                <div class="ctd-block" id="ctd-year">${this.year}</div>
-                <div class="ctd-block" id="ctd-month">${this.month}</div>
-                <div class="ctd-block" id="ctd-day">${this.day}</div>
-                <div class="ctd-block" id="ctd-hour">${this.hour}</div>
-                <div class="ctd-block" id="ctd-minute">${this.minute}</div>
-                <div class="ctd-block" id="ctd-second">${this.second}</div>
+                <div class="ctd-block" id="ctd-year">${this.year}<span>year</span></div>
+                <div class="ctd-block" id="ctd-month">${this.month}<span>months</span></div>
+                <div class="ctd-block" id="ctd-day">${this.day}<span>days</span></div>
+                <div class="ctd-block" id="ctd-hour">${this.hour}<span>hours</span></div>
+                <div class="ctd-block" id="ctd-minute">${this.minute}<span>minutes</span></div>
+                <div class="ctd-block" id="ctd-second">${this.second}<span>seconds</span></div>
             `);
     }
     update(){
