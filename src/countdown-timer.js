@@ -13,20 +13,24 @@ class cdtimer{
         setInterval(() => this.update(), 1000);
     }
     init(){
-        this.update();
+        this.current = new Date();
+        this.calculate();
+        this.check();
         document.getElementById(this.div).insertAdjacentHTML('beforeend', `
-                <div id="ctd-year">${this.year}</div>
-                <div id="ctd-month">${this.month}</div>
-                <div id="ctd-day">${this.day}</div>
-                <div id="ctd-hour">${this.hour}</div>
-                <div id="ctd-minute">${this.minute}</div>
-                <div id="ctd-second">${this.second}</div>
+                <div class="ctd-block" id="ctd-year">${this.year}</div>
+                <div class="ctd-block" id="ctd-month">${this.month}</div>
+                <div class="ctd-block" id="ctd-day">${this.day}</div>
+                <div class="ctd-block" id="ctd-hour">${this.hour}</div>
+                <div class="ctd-block" id="ctd-minute">${this.minute}</div>
+                <div class="ctd-block" id="ctd-second">${this.second}</div>
             `);
+            console.log('done');
     }
     update(){
         this.current = new Date();
         this.calculate();
         this.check();
+        this.display();
     }
     calculate(){
         this.diff = this.finish.getTime() - this.current.getTime();
@@ -38,7 +42,14 @@ class cdtimer{
         this.day = (this.diff % 2592000) / 86400 >> 0;
         this.hour = (this.diff % 86400) / 3600 >> 0;
         this.minute = (this.diff % 3600) / 60 >> 0;
-        this.second = (this.diff % 60) >> 0;
-        console.log(this.year, this.month, this.day, this.hour, this.minute, this.second);
+        this.second = this.diff % 60;
+    }
+    display(){
+        document.getElementById('ctd-year').innerHTML = `${this.year}`;
+        document.getElementById('ctd-month').innerHTML = `${this.month}`;
+        document.getElementById('ctd-day').innerHTML = `${this.day}`;
+        document.getElementById('ctd-hour').innerHTML = `${this.hour}`;
+        document.getElementById('ctd-minute').innerHTML = `${this.minute}`;
+        document.getElementById('ctd-second').innerHTML = `${this.second}`;
     }
 }
