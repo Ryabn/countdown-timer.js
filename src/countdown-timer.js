@@ -17,12 +17,12 @@ class cdtimer{
         this.calculate();
         this.check();
         document.getElementById(this.div).insertAdjacentHTML('beforeend', `
-                <div class="ctd-block" id="ctd-year">${this.year}</div>
-                <div class="ctd-block" id="ctd-month">${this.month}</div>
-                <div class="ctd-block" id="ctd-day">${this.day}</div>
-                <div class="ctd-block" id="ctd-hour">${this.hour}</div>
-                <div class="ctd-block" id="ctd-minute">${this.minute}</div>
-                <div class="ctd-block" id="ctd-second">${this.second}</div>
+                <div class="ctd-block" id="ctd-year">${this.year}<span>year</span></div>
+                <div class="ctd-block" id="ctd-month">${this.month}<span>months</span></div>
+                <div class="ctd-block" id="ctd-day">${this.day}<span>days</span></div>
+                <div class="ctd-block" id="ctd-hour">${this.hour}<span>hours</span></div>
+                <div class="ctd-block" id="ctd-minute">${this.minute}<span>minutes</span></div>
+                <div class="ctd-block" id="ctd-second">${this.second}<span>seconds</span></div>
             `);
     }
     update(){
@@ -36,9 +36,9 @@ class cdtimer{
         this.diff = (this.diff/1000) >> 0;
     }
     check(){
-        this.year = this.diff/31557600 >> 0;
-        this.month = (this.diff % 31557600) / 2592000 >> 0;
-        this.day = (this.diff % 2592000) / 86400 >> 0;
+        this.year = this.diff/31536000 >> 0;
+        this.month = (this.diff % 31536000) / 2629746 >> 0;
+        this.day = (this.diff % 2629746) / 86400 >> 0;
         this.hour = (this.diff % 86400) / 3600 >> 0;
         this.minute = (this.diff % 3600) / 60 >> 0;
         this.second = this.diff % 60;
