@@ -5,6 +5,16 @@
     --ctd-hour-height: 1;
     --ctd-minute-height: 1;
     --ctd-second-height: 1;
+    --ctd-color-month-start-limit: 0;
+    --ctd-color-day-start-limit: 80;
+    --ctd-color-hour-start-limit: 160;
+    --ctd-color-minute-start-limit: 240;
+    --ctd-color-second-start-limit: 0;
+    --ctd-color-month-end-limit: 50;
+    --ctd-color-day-end-limit: 50;
+    --ctd-color-hour-end-limit: 50;
+    --ctd-color-minute-end-limit: 50;
+    --ctd-color-second-end-limit: 360;
 }
 
 .ctd-block{
@@ -13,32 +23,38 @@
     color: white;
     white-space: nowrap;
     text-align: center;
-    transition: height 700ms;
+    transition: height 700ms, background-color 700ms;
 }
 .ctd-block span{
     font-size: 24px;
 }
 #ctd-year{
-    background-color: rgb(167, 255, 204);
+    /* background-color: rgb(167, 255, 204); */
+    background-color: hsl( 180, 90%, 77%);
 }
 #ctd-month{
-    background-color: rgb(160, 255, 255);
+    /* background-color: rgb(160, 255, 255); */
+    background-color: hsl( calc( var(--ctd-color-month-start-limit) + ( var(--ctd-month-height) * var(--ctd-color-month-end-limit))), 90%, 77%);
     height: calc( var(--ctd-block-height) * var(--ctd-month-height) );
 }
 #ctd-day{    
-    background-color: rgb(184, 203, 255);
+    /* background-color: rgb(184, 203, 255); */
+    background-color: hsl( calc( var(--ctd-color-day-start-limit) + ( var(--ctd-day-height) * var(--ctd-color-day-end-limit))), 90%, 77%);
     height: calc( var(--ctd-block-height) * var(--ctd-day-height) );
 }
 #ctd-hour{
-    background-color: rgb(204, 164, 255);
+    /* background-color: rgb(204, 164, 255); */
+    background-color: hsl( calc( var(--ctd-color-hour-start-limit) + ( var(--ctd-hour-height) * var(--ctd-color-hour-end-limit))), 90%, 77%);
     height: calc( var(--ctd-block-height) * var(--ctd-hour-height) );
 }
 #ctd-minute{
-    background-color: rgb(228, 160, 255);
+    /* background-color: rgb(228, 160, 255); */
+    background-color: hsl( calc( var(--ctd-color-minute-start-limit) + ( var(--ctd-minute-height) * var(--ctd-color-minute-end-limit))), 90%, 77%);
     height: calc( var(--ctd-block-height) * var(--ctd-minute-height) );
 }
 #ctd-second{
-    background-color: rgb(255, 192, 140);
+    /* background-color: rgb(255, 192, 140); */
+    background-color: hsl( calc( var(--ctd-color-second-start-limit) + ( var(--ctd-second-height) * var(--ctd-color-second-end-limit))), 90%, 77%);
     height: calc( var(--ctd-block-height) * var(--ctd-second-height) );
 }
 @media only screen and (min-width: 600px){
