@@ -1,9 +1,19 @@
+:root{
+    --ctd-block-height : 70vh;
+    --ctd-month-height: 1;
+    --ctd-day-height: 1;
+    --ctd-hour-height: 1;
+    --ctd-minute-height: 1;
+    --ctd-second-height: 1;
+}
+
 .ctd-block{
     font-family: 'Oswald', sans-serif;
     font-size: 60px;
     color: white;
     white-space: nowrap;
     text-align: center;
+    transition: height 700ms;
 }
 .ctd-block span{
     font-size: 24px;
@@ -13,18 +23,23 @@
 }
 #ctd-month{
     background-color: rgb(160, 255, 255);
+    height: calc( var(--ctd-block-height) * var(--ctd-month-height) );
 }
 #ctd-day{    
     background-color: rgb(184, 203, 255);
+    height: calc( var(--ctd-block-height) * var(--ctd-day-height) );
 }
 #ctd-hour{
     background-color: rgb(204, 164, 255);
+    height: calc( var(--ctd-block-height) * var(--ctd-hour-height) );
 }
 #ctd-minute{
     background-color: rgb(228, 160, 255);
+    height: calc( var(--ctd-block-height) * var(--ctd-minute-height) );
 }
 #ctd-second{
     background-color: rgb(255, 192, 140);
+    height: calc( var(--ctd-block-height) * var(--ctd-second-height) );
 }
 @media only screen and (min-width: 600px){
     .ctd-block span{

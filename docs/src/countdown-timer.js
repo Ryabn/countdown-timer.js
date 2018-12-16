@@ -8,6 +8,7 @@ class cdtimer{
         /**
          * Using arrow function here bypasses weird bug where you have to pass 'this' parameter in setInterval
          * 
+         * Here is another fix that doesn't use the arrow function syntax
          * setInterval( this.update().bind(this), 200);
          */
         setInterval(() => this.update(), 1000);
@@ -17,13 +18,13 @@ class cdtimer{
         this.calculate();
         this.check();
         document.getElementById(this.div).insertAdjacentHTML('beforeend', `
-                <div class="ctd-block" id="ctd-year">${this.year}<span>year</span></div>
-                <div class="ctd-block" id="ctd-month">${this.month}<span>months</span></div>
-                <div class="ctd-block" id="ctd-day">${this.day}<span>days</span></div>
-                <div class="ctd-block" id="ctd-hour">${this.hour}<span>hours</span></div>
-                <div class="ctd-block" id="ctd-minute">${this.minute}<span>minutes</span></div>
-                <div class="ctd-block" id="ctd-second">${this.second}<span>seconds</span></div>
-            `);
+            <div class="ctd-block" id="ctd-year">${this.year}<span>years</span></div>
+            <div class="ctd-block" id="ctd-month">${this.month}<span>months</span></div>
+            <div class="ctd-block" id="ctd-day">${this.day}<span>days</span></div>
+            <div class="ctd-block" id="ctd-hour">${this.hour}<span>hours</span></div>
+            <div class="ctd-block" id="ctd-minute">${this.minute}<span>minutes</span></div>
+            <div class="ctd-block" id="ctd-second">${this.second}<span>seconds</span></div>
+        `);
     }
     update(){
         this.current = new Date();
@@ -42,9 +43,16 @@ class cdtimer{
         this.hour = (this.diff % 86400) / 3600 >> 0;
         this.minute = (this.diff % 3600) / 60 >> 0;
         this.second = this.diff % 60;
+        
+        document.documentElement.style.setProperty('--ctd-month-height', this.month/11);
+        document.documentElement.style.setProperty('--ctd-day-height', this.day/30);
+        document.documentElement.style.setProperty('--ctd-hour-height', this.hour/11);
+        document.documentElement.style.setProperty('--ctd-minute-height', this.minute/59);
+        document.documentElement.style.setProperty('--ctd-second-height', this.second/59);
     }
     display(){
-        document.getElementById('ctd-year').innerHTML = `${this.year} <span>year</span>`;
+
+        document.getElementById('ctd-year').innerHTML = `${this.year} <span>years</span>`;
         document.getElementById('ctd-month').innerHTML = `${this.month} <span>months</span>`;
         document.getElementById('ctd-day').innerHTML = `${this.day} <span>days</span>`;
         document.getElementById('ctd-hour').innerHTML = `${this.hour} <span>hours</span>`;
