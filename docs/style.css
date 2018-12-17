@@ -1,5 +1,7 @@
 html, body{
     background-color: #151515;
+    background-image: url('./bg.jpg');
+    background-size: cover;
 }
 #timer-main{
     position: fixed;
