@@ -92,8 +92,11 @@
         height: calc( var(--ctd-block-height) * var(--ctd-second-percent) );
         width: 100%;
     }
-    .ctd-block span{
+    .ctd-block{
+        padding-left: 0;
         text-align: center;
+    }
+    .ctd-block span{
         display:  block;
     }
 }
