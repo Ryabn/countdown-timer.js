@@ -15,11 +15,11 @@
     --ctd-color-hour-end-limit: 50;
     --ctd-color-minute-end-limit: 50;
     --ctd-color-second-end-limit: 360;
-    --ctd-color-month: hsl( calc( var(--ctd-color-month-start-limit) + ( var(--ctd-month-height) * var(--ctd-color-month-end-limit))), 90%, 77%);
-    --ctd-color-day: hsl( calc( var(--ctd-color-day-start-limit) + ( var(--ctd-day-height) * var(--ctd-color-day-end-limit))), 90%, 77%);
-    --ctd-color-hour: hsl( calc( var(--ctd-color-hour-start-limit) + ( var(--ctd-hour-height) * var(--ctd-color-hour-end-limit))), 90%, 77%);
-    --ctd-color-minute: hsl( calc( var(--ctd-color-minute-start-limit) + ( var(--ctd-minute-height) * var(--ctd-color-minute-end-limit))), 90%, 77%);
-    --ctd-color-second: hsl( calc( var(--ctd-color-second-start-limit) + ( var(--ctd-second-height) * var(--ctd-color-second-end-limit))), 90%, 77%);
+    --ctd-color-month: hsla( calc( var(--ctd-color-month-start-limit) + ( var(--ctd-month-height) * var(--ctd-color-month-end-limit))), 90%, 77%, 0.8);
+    --ctd-color-day: hsla( calc( var(--ctd-color-day-start-limit) + ( var(--ctd-day-height) * var(--ctd-color-day-end-limit))), 90%, 77%, 0.8);
+    --ctd-color-hour: hsla( calc( var(--ctd-color-hour-start-limit) + ( var(--ctd-hour-height) * var(--ctd-color-hour-end-limit))), 90%, 77%, 0.8);
+    --ctd-color-minute: hsla( calc( var(--ctd-color-minute-start-limit) + ( var(--ctd-minute-height) * var(--ctd-color-minute-end-limit))), 90%, 77%, 0.8);
+    --ctd-color-second: hsla( calc( var(--ctd-color-second-start-limit) + ( var(--ctd-second-height) * var(--ctd-color-second-end-limit))), 90%, 77%, 0.8);
 }
 
 .ctd-block{
@@ -35,7 +35,8 @@
 }
 #ctd-year{
     box-shadow: 0px 0px 7px hsl( 180, 90%, 77%);
-    background-color: hsl( 180, 90%, 77%);
+    background-color: hsla( 180, 90%, 77%, 0.8);
+    height: 100%;
 }
 #ctd-month{
     box-shadow: 0px 0px 7px var(--ctd-color-month);
