@@ -44,11 +44,11 @@ class cdtimer{
         this.minute = (this.diff % 3600) / 60 >> 0;
         this.second = this.diff % 60;
         
-        document.documentElement.style.setProperty('--ctd-month-height', this.month/11);
-        document.documentElement.style.setProperty('--ctd-day-height', this.day/30);
-        document.documentElement.style.setProperty('--ctd-hour-height', this.hour/23);
-        document.documentElement.style.setProperty('--ctd-minute-height', this.minute/59);
-        document.documentElement.style.setProperty('--ctd-second-height', this.second/59);
+        document.documentElement.style.setProperty('--ctd-month-percent', this.month/11);
+        document.documentElement.style.setProperty('--ctd-day-percent', this.day/30);
+        document.documentElement.style.setProperty('--ctd-hour-percent', this.hour/23);
+        document.documentElement.style.setProperty('--ctd-minute-percent', this.minute/59);
+        document.documentElement.style.setProperty('--ctd-second-percent', this.second/59);
     }
     display(){
 
