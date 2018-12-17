@@ -1,8 +1,13 @@
-html, body{
+body{
+    margin: 0;
     background-color: #151515;
+    height: 100vh;
     background-image: url('./bg.jpg');
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;    
 }
+
 #timer-main{
     position: fixed;
     height: 80vh;
