@@ -27,12 +27,22 @@ button:hover{
     position: fixed;
     height: 80vh;
     width: 80vw;
-    top: 10vh;
+    top: 5vh;
     left: 10vw;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 1fr);
     row-gap: 5px;
+}
+#event-name{
+    position: fixed;
+    top: 85vh;
+    height: 10vh;
+    font-size: 6vh;
+    color: white;
+    width: 100vw;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
 }
 #info-button{
     position: fixed;
@@ -49,9 +59,12 @@ button:hover{
     #timer-main{
         height: 70vh;
         width: 80vw;
-        top: 15vh;
+        top: 10vh;
         grid-template-columns: repeat(6, 1fr);
         grid-template-rows: 1fr;
         column-gap: 10px;
+    }
+    #event-name{
+        font-size: 9vh;
     }
 }

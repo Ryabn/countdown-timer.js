@@ -5,23 +5,32 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Countdown-timer.js Example</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" media="screen" href="./lib/countdown-timer.min.css" />
-        <script src="./lib/countdown-timer.min.js"></script>
-        
-
-        <script src="https://unpkg.com/tippy.js@3/dist/tippy.all.min.js" defer></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">        
 
         <!-- personal styles and scripts -->
-        <link rel="stylesheet" type="text/css" media="screen" href="./assets/style.css" />
-        <script src="./assets/script.js"></script>
+        <link rel="stylesheet" type="text/css" media="screen" href="./assets/create.css" />
+        <script src="./assets/create.js"></script>
     </head>
     <body onload="load();">
-        <div id="timer-main"></div>
-        <div id="info-button">
-            <i class="material-icons">info</i>
+        <div id="root">
+            <h1>Create Your Own Countdown</h1>
+            Choose the date:
+            <input id="date" type="text" placeholder="Click to select date" class="datepicker">        
+            <br>
+            <br>
+            <div class="input-field">
+                <input id="event-name" type="text" class="validate purple-text text-darken-4">
+                <label class="active deep-purple-text" for="first_name2">Event Name: (i.e My Birthday)</label>
+            </div>
+            <div style="text-align: center;">
+                <button class="btn waves-effect waves-light" name="action" onclick="create();">
+                    Create Countdown
+                    <i class="material-icons right">send</i>
+                </button>
+            </div>
+
         </div>
     </body>
 </html>
