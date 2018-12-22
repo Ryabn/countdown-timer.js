@@ -51,6 +51,9 @@ Here are all the variables used
 | --ctd-color-hour-end-limit |  50 | Range  </pre>of color value | Yes |
 | --ctd-color-minute-end-limit |  50 | Range  </pre>of color value | Yes |
 | --ctd-color-second-end-limit |  1080 | Range  </pre>of color value | Yes |
+
+|Variable Name | Default Value | What it represents | Can I change? |
+|---|---|---|---| 
 | --ctd-color-month | <pre> hsla( calc( var(--ctd-color-month-start-limit) + ( var(--ctd-month-percent) * var(--ctd-color-month-end-limit))), 90%, 77%, 0.8) </pre> | Color value | Yes* |
 | --ctd-color-day | <pre> hsla( calc( var(--ctd-color-day-start-limit) + ( var(--ctd-day-percent) * var(--ctd-color-day-end-limit))), 90%, 77%, 0.8) </pre> | Color value | Yes* |
 | --ctd-color-hour | <pre> hsla( calc( var(--ctd-color-hour-start-limit) + ( var(--ctd-hour-percent) * var(--ctd-color-hour-end-limit))), 90%, 77%, 0.8) </pre> | Color value | Yes* |
