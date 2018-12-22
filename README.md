@@ -31,6 +31,7 @@ The date needs to be a date object using the javascript built-in date class.
 
 Styling is done mostly through css variables.
 Here are all the variables used
+
 |Variable Name | Default Value | What it represents | Can I change? |
 |---|---|---|---| 
 | --ctd-block-height  |  100% | How much of the height it should take up |  No |
