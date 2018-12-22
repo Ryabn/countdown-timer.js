@@ -23,9 +23,9 @@ function load(){
     let timer = new cdtimer(divName, date);
 }
 ```
-Keep in mind that divName can be anything as long as there is the corresponding html tag that has that id. 
+####  Note: the divName does not have to be timer-main, it can be anything you want. Just make sure that that html tag exists in the html file.
 
-The date needs to be a date object using the javascript built-in date class.
+#### The date needs to be a date object using the javascript built-in date class.
 
 ## Styling your own countdown
 
